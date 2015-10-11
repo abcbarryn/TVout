@@ -31,7 +31,7 @@
  *	INVERT	=2
  *	All others will be ignored.
 */
-
+/* Patched to allow support for the Arduino Leonardo */
 #include "TVout.h"
 
 
@@ -730,7 +730,11 @@ void TVout::tone(unsigned int frequency, unsigned long duration_ms) {
 	if (frequency == 0)
 		return;
 
+#if defined(__AVR_ATmega32U4__)
+#define TIMER 0
+#else
 #define TIMER 2
+#endif
 	//this is init code
 	TCCR2A = 0;
 	TCCR2B = 0;
