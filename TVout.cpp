@@ -298,6 +298,7 @@ unsigned char TVout::get_pixel(uint8_t x, uint8_t y) {
  *		The color of the line.
  *		(see color note at the top of this file)
  */
+/* Patched to allow support for the Arduino Leonardo */
 void TVout::draw_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, char c) {
 
 	if (x0 > display.hres*8 || y0 > display.vres || x1 > display.hres*8 || y1 > display.vres)
