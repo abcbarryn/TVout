@@ -31,7 +31,7 @@
  *	INVERT	=2
  *	All others will be ignored.
 */
-
+/* Patched to allow support for the Arduino Leonardo */
 #include "TVout.h"
 
 
