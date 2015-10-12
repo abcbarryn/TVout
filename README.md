@@ -4,6 +4,8 @@ This is a library for generating composite video on an ATmega microcontroller.
 
 This branch of the TVout library has been patched to allow use with the Arduino Leonardo. The goal of this project is to create a simple interupt driven library for generating composite video on a single AVR chip.
 
+The contents of this folder should be placed in a folder named "TVout" in your arduino libraries folder.
+
 Currently the output is NTSC or PAL at a resolution of 128x96 by default. The library currently works on ATmega168,328,1280,2560,644p,1284p,32U4,AT90USB1286 and more can be added by editing spec/hardware_setup.h.
 
 There are some timing issues with the m1284p, may be related to sanguino core.
