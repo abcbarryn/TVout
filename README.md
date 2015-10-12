@@ -1,5 +1,8 @@
-This branch of the TVout library has been patched to allow use with the Arduino Leonardo.
-The goal of this project is to create a simple interupt driven library for generating composite video on a single AVR chip.
+# Arduino-TVout
+
+This is a library for generating composite video on an ATmega microcontroller.
+
+This branch of the TVout library has been patched to allow use with the Arduino Leonardo. The goal of this project is to create a simple interupt driven library for generating composite video on a single AVR chip.
 
 Currently the output is NTSC or PAL at a resolution of 128x96 by default. The library currently works on ATmega168,328,1280,2560,644p,1284p,32U4,AT90USB1286 and more can be added by editing spec/hardware_setup.h.
 
@@ -13,3 +16,18 @@ m644,m1284p	D 5	    A 7	    D 7	    sanguino        13	    A7(D24)	  8
 m32u4       B 5	    B 4	    B 7	    Leonardo        9       8         11
 AT90USB1286	B 5	    F 7	    B 4	    --	            --	    --	      --
 ```
+
+##Connections
+
+SYNC is on OCR1A and AUDIO is on OCR2A (except on the Arduino Leonardo, where AUDIO is on OCR0A)
+
+There are some timing issues with the m1284p, may be related to sanguino core.
+
+On NG, Decimila, UNO and Nano the sync is pin 9, video on 7 and audio on 11. On Mega2560	sync is pin 11, video is on A7(D29)	and audio is on pin 10.
+
+
+##Examples
+
+https://youtu.be/MEg_V4YZDh0
+
+https://youtu.be/bHpFv_x_8Kk
